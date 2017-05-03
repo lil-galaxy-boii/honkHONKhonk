@@ -1,13 +1,15 @@
 var namespace = "http://www.w3.org/2000/svg"
 
-var Gamzee = makeImage ("https://vignette4.wikia.nocookie.net/mspaintadventures/images/4/4c/Gamzee_Makara_Sane.png/revision/latest?cb=20111215084942")
-var Equius = makeImage("https://vignette2.wikia.nocookie.net/mspaintadventures/images/b/b3/Equius_Zahhak.png/revision/latest?cb=20100825021207")
-var Nepeta = makeImage("http://2.bp.blogspot.com/-P1QyPQwy-6Y/T8B5tPDh4rI/AAAAAAAAACI/8hWfAGIpuw4/s1600/20100827014649!Nepeta.gif")
-var Tavros = makeImage ("http://vignette1.wikia.nocookie.net/mspaintadventures/images/e/ee/Tavros.png/revision/latest?cb=20100825020349")
-var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332")
+var Gamzee = makeImage ("https://vignette4.wikia.nocookie.net/mspaintadventures/images/4/4c/Gamzee_Makara_Sane.png/revision/latest?cb=20111215084942", 110, 40, 60, 60)
+var Equius = makeImage("https://vignette2.wikia.nocookie.net/mspaintadventures/images/b/b3/Equius_Zahhak.png/revision/latest?cb=20100825021207", 110, 40, 60, 60)
+var Nepeta = makeImage("http://2.bp.blogspot.com/-P1QyPQwy-6Y/T8B5tPDh4rI/AAAAAAAAACI/8hWfAGIpuw4/s1600/20100827014649!Nepeta.gif", 160, 10, 60, 60)
+var Tavros = makeImage ("http://vignette1.wikia.nocookie.net/mspaintadventures/images/e/ee/Tavros.png/revision/latest?cb=20100825020349", 110, 40, 60, 60)
+var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332",  10, 40, 60, 60)
 
 var score = 0
-var scoreText = makeText(score, 10, 20, 20,"putafonthere", white)
+var scoreText = makeText(score, 10, 20, 20,"putafonthere", "white")
+
+
 
 
 
