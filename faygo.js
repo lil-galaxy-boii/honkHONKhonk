@@ -1,15 +1,41 @@
 var namespace = "http://www.w3.org/2000/svg"
 
-var Gamzee = makeImage ("https://vignette4.wikia.nocookie.net/mspaintadventures/images/4/4c/Gamzee_Makara_Sane.png/revision/latest?cb=20111215084942", 110, 40, 60, 60)
-var Equius = makeImage("https://vignette2.wikia.nocookie.net/mspaintadventures/images/b/b3/Equius_Zahhak.png/revision/latest?cb=20100825021207", 110, 40, 60, 60)
-var Nepeta = makeImage("http://2.bp.blogspot.com/-P1QyPQwy-6Y/T8B5tPDh4rI/AAAAAAAAACI/8hWfAGIpuw4/s1600/20100827014649!Nepeta.gif", 160, 10, 60, 60)
-var Tavros = makeImage ("http://vignette1.wikia.nocookie.net/mspaintadventures/images/e/ee/Tavros.png/revision/latest?cb=20100825020349", 110, 40, 60, 60)
-var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332",  10, 40, 60, 60)
+var Gamzee = makeImage ("https://vignette4.wikia.nocookie.net/mspaintadventures/images/4/4c/Gamzee_Makara_Sane.png/revision/latest?cb=20111215084942", 145, 40, 50, 50)
+var Equius = makeImage("https://vignette2.wikia.nocookie.net/mspaintadventures/images/b/b3/Equius_Zahhak.png/revision/latest?cb=20100825021207", 290, 40, 40, 40)
+var Nepeta = makeImage("https://vignette4.wikia.nocookie.net/mspaintadventures/images/3/37/Nepeta_Leijon.png/revision/latest?cb=20121218182441", 260, 10, 40, 40)
+var Tavros = makeImage ("http://vignette1.wikia.nocookie.net/mspaintadventures/images/e/ee/Tavros.png/revision/latest?cb=20100825020349", 90, 100, 50, 50)
+var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332", 30, 40, 50, 50)
 
 var score = 0
 var scoreText = makeText(score, 10, 20, 20,"putafonthere", "white")
 
+function sober() {
+move(Equius, 1, 0)
+move(Nepeta, 1, 0)
+move(Tavros, 1,0)
+move(Vriska, 1,0)
 
+
+var EZx = getX(Equius)
+var NLx =  getX(Nepeta)
+var TNx = getX(Tavros)
+var VSx = getX(Vriska)
+
+if (EZx < 300) {
+  setX(Equius, 290)
+}
+ if (NLx < 300) {
+   setX(Nepeta, 260)
+ }
+  if (TNx < 300) {
+    setX(Tavros, 90)
+  }
+    if (VSx < 300) {
+      setX(Vriska, 30)
+}
+
+requestAnimationFrame(sober)
+}
 
 
 
