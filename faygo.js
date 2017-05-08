@@ -4,34 +4,35 @@ var Gamzee = makeImage ("https://vignette4.wikia.nocookie.net/mspaintadventures/
 var Equius = makeImage("https://vignette2.wikia.nocookie.net/mspaintadventures/images/b/b3/Equius_Zahhak.png/revision/latest?cb=20100825021207", 290, 40, 40, 40)
 var Nepeta = makeImage("https://vignette4.wikia.nocookie.net/mspaintadventures/images/3/37/Nepeta_Leijon.png/revision/latest?cb=20121218182441", 260, 10, 40, 40)
 var Tavros = makeImage ("http://vignette1.wikia.nocookie.net/mspaintadventures/images/e/ee/Tavros.png/revision/latest?cb=20100825020349", 90, 100, 50, 50)
-var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332", 30, 40, 50, 50)
+var Vriska = makeImage ("https://vignette2.wikia.nocookie.net/mspaintadventures/images/2/26/Vriska%2C_God_Tier%2C_Hood_Down.png/revision/latest?cb=20130301113332", 30, 100, 50, 50)
+var Karkat = makeImage ("https://vignette3.wikia.nocookie.net/mspaintadventures/images/1/17/Karkat_Vantas.png/revision/latest?cb=20111216151555", 30, 50, 50, 50)
 
 var score = 0
 var scoreText = makeText(score, 10, 20, 20,"putafonthere", "white")
 
 function sober() {
-move(Equius, 1, 0)
-move(Nepeta, 1, 0)
-move(Tavros, 1,0)
-move(Vriska, 1,0)
-
+move(Equius, 1.5, 0)
+move(Nepeta, 1.5, 0)
+move(Tavros, 1.5, 0)
+move(Vriska, 1.5, 0)
+move(Karat, 1.5, 0)
 
 var EZx = getX(Equius)
-var NLx =  getX(Nepeta)
+var NLx = getX(Nepeta)
 var TNx = getX(Tavros)
 var VSx = getX(Vriska)
 
-if (EZx < 300) {
-  setX(Equius, 290)
+if (EZx > 300) {
+  setX(Equius, -5)
 }
- if (NLx < 300) {
-   setX(Nepeta, 260)
+ if (NLx > 300) {
+   setX(Nepeta, -10)
  }
-  if (TNx < 300) {
-    setX(Tavros, 90)
+  if (TNx > 300) {
+    setX(Tavros, 0)
   }
-    if (VSx < 300) {
-      setX(Vriska, 30)
+    if (VSx > 300) {
+      setX(Vriska, 0)
 }
 
 requestAnimationFrame(sober)
@@ -92,7 +93,9 @@ function move(shape, dx, dy) {
   if (shape.hasAttribute("x") && shape.hasAttribute("y")) {
     var x = parseFloat(shape.getAttribute("x"))
     var y = parseFloat(shape.getAttribute("y"))
-    shape.setAttribute("x", x + dx)
+    var newx = x + dx
+    shape.setAttribute("x", newx)
+    console.log("Set x to "  + newx)
     shape.setAttribute("y", y + dy)
   } else {
     var cx = parseFloat(shape.getAttribute("cx"))
