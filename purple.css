@@ -11,3 +11,8 @@ p{
 h4 {
   color: #320887;
 }
+svg {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBK20uEzO9-HDu7BAfDInv6_NRsGxqd-USJdCn3mOvufPB5kLnw");
+  display: block;
+  margin: auto;
+}

@@ -15,12 +15,14 @@ move(Equius, 1.5, 0)
 move(Nepeta, 1.5, 0)
 move(Tavros, 1.5, 0)
 move(Vriska, 1.5, 0)
-move(Karat, 1.5, 0)
+move(Karkat, 1.5, 0)
 
 var EZx = getX(Equius)
 var NLx = getX(Nepeta)
 var TNx = getX(Tavros)
 var VSx = getX(Vriska)
+var GMx = getX(Gamzee)
+var KVx = getX(Karkat)
 
 if (EZx > 300) {
   setX(Equius, -5)
@@ -35,7 +37,75 @@ if (EZx > 300) {
       setX(Vriska, 0)
 }
 
-requestAnimationFrame(sober)
+if (collides(Gamzee, Equius)) {
+  alert(score)
+  score = 0
+  scoreText.innerHTML = score
+  location.reload(true)
+  setX (EZx, 29)
+  setX (NLx, 260)
+  setX (TNx, 90)
+  setX (VSx, 30)
+  setX (GMx, 145)
+  setX (KVx, 30)
+}
+if (collides(Gamzee, Nepeta)) {
+  alert(score)
+  score = 0
+  scoreText.innerHTML = score
+  location.reload(true)
+  setX (EZx, 29)
+  setX (NLx, 260)
+  setX (TNx, 90)
+  setX (VSx, 30)
+  setX (GMx, 145)
+  setX (KVx, 30)
+}
+if (collides(Gamzee, Vriska)) {
+  alert(score)
+  score = 0
+  scoreText.innerHTML = score
+  location.reload(true)
+  setX (EZx, 29)
+  setX (NLx, 260)
+  setX (TNx, 90)
+  setX (VSx, 30)
+  setX (GMx, 145)
+  setX (KVx, 30)
+}
+if (collides(Gamzee, Tavros)) {
+  alert("You saved Tavros!")
+  score = +1
+  location.reload(true)
+  setX (EZx, 29)
+  setX (NLx, 260)
+  setX (TNx, 90)
+  setX (VSx, 30)
+  setX (GMx, 145)
+  setX (KVx, 30)
+}
+if (collides(Gamzee, Karkat)) {
+alert ("*pap*")
+  alert(score)
+  score = 0
+  scoreText.innerHTML = score
+  location.reload(true)
+  setX (EZx, 29)
+  setX (NLx, 260)
+  setX (TNx, 90)
+  setX (VSx, 30)
+  setX (GMx, 145)
+  setX (KVx, 30)
+}
+  requestAnimationFrame(sober)
+}
+  addEventListener('keydown', moveGamzee)
+function moveGamzee(event) {
+  if (event.key == "ArrowDown"){
+    move(Gamzee, 0, 10)
+  } else if (event.key=="ArrowUp") {
+    move(Gamzee, 0, -10)
+}
 }
 
 
