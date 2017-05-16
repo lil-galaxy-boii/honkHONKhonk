@@ -1,6 +1,7 @@
 body{
   background-color: black;
   text-align: center;
+  font-family: 'Inknut Antiqua', serif;
 }
 h3 {
   color: #320887;
@@ -15,4 +16,21 @@ svg {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBK20uEzO9-HDu7BAfDInv6_NRsGxqd-USJdCn3mOvufPB5kLnw");
   display: block;
   margin: auto;
+}
+a:link {
+    text-decoration: none;
+    color: #320887;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #37ff00
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }

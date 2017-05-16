@@ -1,6 +1,7 @@
 body{
   background-color: black;
   text-align: center;
+  font-family: 'Inknut Antiqua', serif;
 }
 h3 {
   color: #320887;
@@ -10,4 +11,21 @@ p{
 }
 h4 {
   color: #320887;
+}
+a:link {
+    text-decoration: none;
+    color: #320887;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #37ff00
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }
